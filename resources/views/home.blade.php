@@ -8,7 +8,34 @@
 </head>
 <body>
 
-    <h1>Home</h1>
+    <div>
+
+        @foreach ($movies as $movie)
+
+            <div>
+                <h3>Titolo:</h3>
+                <p>{{ $movie['title'] }}</p>
+            </div>
+            <div>
+                <h3>Titolo originale:</h3>
+                <p>{{ $movie['original_title'] }}</p>
+            </div>
+            <div>
+                <h3>Nazionalità:</h3>
+                <p>{{ $movie['nazionality'] }}</p>
+            </div>
+            <div>
+                <h3>Data:</h3>
+                <p>{{ $movie['date'] }}</p>
+            </div>
+            <div>
+                <h3>Voto:</h3>
+                <p>{{ $movie['vote'] }}</p>
+            </div>
+            
+        @endforeach
+        
+    </div>
     
 </body>
 </html>
